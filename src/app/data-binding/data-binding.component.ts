@@ -22,6 +22,13 @@ export class DataBindingComponent implements OnInit {
   valorSalvo: string = '';
   isMouseOver: boolean = false;
 
+  nome: string = 'abc';
+
+  pessoa: any = {
+    nome: 'andre',
+    idade: 26
+  };
+
 
   getValor() {
     return 1 + 2;

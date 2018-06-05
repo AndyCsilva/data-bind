@@ -1,0 +1,32 @@
+<section class="two-way-binding">
+    <article>
+        <h3>two-way Data Binding</h3>
+        <div>
+            <div>
+                <label for="property-binding">property binding&nbsp;</label>
+                <input name="property-binding" type="text" [value]="nome" (input)="nome = $event.target.value" />
+            </div>
+            <div>
+                <label for="ngmodel-binding">ng model binding&nbsp;</label>
+                <input name="ngmodel-binding" type="text" [ngModel]="nome" (ngModelChange)="nome = $event" />
+            </div>
+            <div>
+                <label for="two-binding">
+          <strong>two-way data binding</strong>&nbsp;</label>
+                <input name="two-binding" type="text" [(ngModel)]="nome" />
+            </div>
+            <div>
+                <label for="two-binding-native">two-way data binding native&nbsp;</label>
+                <input name="two-binding-native" type="text" bindon-ngModel="nome" />
+            </div>
+            <p>Voce digitou: {{ nome }}</p>
+            <div>
+                <p>Olá, me chamo {{ pessoa.nome }} e tenho {{ pessoa.idade }} anos!</p>
+                <label for="two-binding-obj">two-way data binding com objeto&nbsp;</label>
+                <input name="two-binding-obj" type="text" [(ngModel)]="pessoa.nome" />
+                <input name="two-binding-obj" type="number" [(ngModel)]="pessoa.idade" min="0" max="150" />
+            </div>
+
+        </div>
+    </article>
+</section>
